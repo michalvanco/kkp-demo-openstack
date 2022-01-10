@@ -1,0 +1,32 @@
+apiVersion: kubermatic.k8s.io/v1
+kind: Preset
+metadata:
+    name: kkp
+    namespace: kubermatic
+spec:
+    openstack:
+        domain: DEFAULT
+        tenant: c8bdadf7de7ddac91a31e21ccf533182d8f76c08
+        username: ENC[AES256_GCM,data:HEw7p7wTBss3ct6s,iv:FSiujTtj17Sa6ZSKWMJyQHXiimEEAfx5czOjWEp/UVY=,tag:20+0alhplg2c/wld0j0Ifw==,type:str]
+        password: ENC[AES256_GCM,data:ec7zkaj8r4pfk4jV2WPYT13eFvztKsXOhROiKLdX,iv:Lvlt3cBQ3t0ZmKnp8ZosKWBKgtZxyNBSXV+DC+FXBaQ=,tag:iOL04UTPFG5tcD6wMlj/YA==,type:str]
+        floatingIpPool: ext-net
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age15ypxnzg45kl6e7xhvdywyev9x4hw8dk4ncc7v7cg62rkm6rtf3gsq9c2hr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB6dndpTHdVVWVRaElDTGdS
+            dzVJZk5rMDYyazJ3YXl1NC9CTmJSS3NvWVhBClgxN244TGRDcXppbjhSeEJEQVYw
+            cE5acmRNU2pZUlpzUWVuM1Q2RzFKN2MKLS0tIHZjODM2cFhuVlNNMUtBNU1HdXFX
+            QTV6K01uc1pkdXBUdysyZjJ1ZCtzc1UKY1RCat29wwQqCBGn2KLBFL4JhrqyCUo9
+            ofT4sQ8Ac2Hy/giAzU9yYSZ7n6Myks3FrMNDI5G4bo+MSA6rIA3l7w==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-01-10T09:54:38Z"
+    mac: ENC[AES256_GCM,data:xJXfbYC7ZjiF0peGcpAwenu6bFIqTHfDkxXoiT84vkUWexYNvwA3vJbDFz+nTB1a6FNviL7QWzfwSmb2o+pWjrkRXCeylHor3QS0CHcQmZx1VQdyBy05M/WpuU4grvwD/tZuxe/72UDZXPcS7AJPGFSViz8IX0GGYNPbgX4MKeQ=,iv:oJfi83v0kaSjq0ulYM4DFX9EC5dIEgkNOySqCe3YVq8=,tag:ZGPdxWI/wz87hZUP7A78kQ==,type:str]
+    pgp: []
+    encrypted_regex: (accessKeyID|secretAccessKey|username|password|tenantId|subscriptionId|clientId|clientSecret|serviceAccount)
+    version: 3.7.1

@@ -1,0 +1,35 @@
+apiVersion: kubeone.io/v1beta1
+kind: KubeOneCluster
+versions:
+    kubernetes: v1.23.1
+cloudProvider:
+    openstack: {}
+    external: true
+    cloudConfig: ENC[AES256_GCM,data:XMP5Cg2RfO0+WotTP2onwwCG2BYxpq5auD50+R6aD+3eyqK/OwlviJ2qCMo0uRuAeDuIhcYtVc30d4CeNQzFnON6qMOp09ZNNZuLDeUUGI9n+f7y7dKL5WuAOw/GpNHPeaERE3UBu6mAyLZYuXungMYRoycTpftyrzswScdCAEsmc0098h7hhCC7XnA6j+TglqgYMQFDywIMVWho0DL07vFlRHchjq//CnqyPbhTl/16tVw/piiRAn2H1+Bm23wcrohxly6pfKOS/dOBJhmahZZ1HOewp5SiQu1FleJw0h593Qddi35aWTJAE5BJzK1o36MAjQ+asFcdOwKxGWoB0KIKdBRQQi+oxzus05tsozY6Wzapn64=,iv:3rDPqbmZ2IdUkmiHJAX7hA56OWGaCHlo4uwK4tJnvWI=,tag:QXz+bu2udQMgAkTf8+sD7A==,type:str]
+containerRuntime:
+    containerd: {}
+addons:
+    enable: true
+    path: ./addons
+    addons:
+        - name: cluster-autoscaler
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age15ypxnzg45kl6e7xhvdywyev9x4hw8dk4ncc7v7cg62rkm6rtf3gsq9c2hr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBRSXNoUXZGbmlwL3FZTU44
+            cmsyR1E5VFNvR004L3RSN1JyVGFIak1SeFFZCndMcDUvM2pHRU5FWTBMdVJ5d2VQ
+            OEhGRmZ3VGJacEgrc2w1N1ZTRzVFTjgKLS0tIDdwa0JXWXl0M1ZobWh6VEpXV0RG
+            WUdXek9YaU1TcEdwV08zaW5QQ3RlQnMKunu+IQhhlo2VdZZannu2AY4dwT+svBSW
+            CFEmGEXLqPPpT1sYolKBtaOeQhQczXNlW/VZZpENwFrd0mEKeTcUjQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-01-10T09:54:38Z"
+    mac: ENC[AES256_GCM,data:yFvfeFsIHVAC6mLDqhoyL+fZgRf75R6wP9R3sbhZ/NVLbrE1iZbefEfNqipGRBWboL7mR4zX7zGMQbShzsHKdLFft2GzrW6D8Fyp9iUbZ0rTAoWZftwfwN1BP/BIwPKPv/YKyAWTczfhhw4PN751CkoRMH9ll4QluX7t/lj16vA=,iv:+jhWEjMZAc5JXPHay1LIrdGpPr6vFguxf5R4iZXLOZk=,tag:aAIPUmYVsS6WB+aJDD1edQ==,type:str]
+    pgp: []
+    encrypted_regex: (cloudConfig)
+    version: 3.7.1

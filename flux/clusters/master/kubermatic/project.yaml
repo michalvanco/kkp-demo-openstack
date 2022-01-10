@@ -1,0 +1,8 @@
+apiVersion: kubermatic.k8s.io/v1
+kind: Project
+metadata:
+  name: ybuo8srjrj
+spec:
+  name: demo
+status:
+  phase: Active

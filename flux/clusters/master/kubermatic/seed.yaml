@@ -1,0 +1,22 @@
+apiVersion: kubermatic.k8s.io/v1
+kind: Seed
+metadata:
+  name: kubermatic
+  namespace: kubermatic
+spec:
+  country: DE
+  datacenters:
+    openstack-syseleven:
+      country: "DE"
+      location: "Berlin"
+      spec:
+        openstack:
+          auth_url: "https://keystone.cloud.syseleven.net:5000/v3"
+          availability_zone: "dbl1"
+          region_name: "dbl"
+          dns_servers: [ ]
+          images:
+            ubuntu: "ubuntu-e2e"
+  kubeconfig:
+    name: kubeconfig-cluster
+    namespace: kubermatic
